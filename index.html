@@ -13,23 +13,27 @@
             background-repeat: no-repeat;
             padding: 20px;
             margin: 0;
+            color: white;
         }
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+            padding: 10px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
         h1 {
-            color: #333; /* Dark grey heading text */
+            color: #ffd700; /* Gold heading text */
+        }
+        p {
+            color: #ccc; /* Light grey paragraph text */
         }
         .button {
             display: inline-block;
             padding: 10px 20px;
             margin: 10px;
-            background-color: #4CAF50; /* Green button background */
+            background-color: #2e86c1; /* Green button background */
             color: white;
             text-decoration: none;
             border: none;
@@ -38,7 +42,13 @@
             transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #45a049; /* Darker green on hover */
+            background-color: #2b7abc; /* Darker green on hover */
+        }
+        .button.rank-sheet {
+            background-color: #2b7abc; /* Blue button background */
+        }
+        .button.rank-sheet:hover {
+            background-color: #2b7abc; /* Darker blue on hover */
         }
     </style>
 </head>
@@ -46,8 +56,9 @@
     <div class="container">
         <h1>Welcome to Irons Grotto</h1>
         <p>Check out our community links:</p>
-        <a href="https://discord.com" target="_blank" class="button">Join Discord</a>
-        <a href="https://templeosrs.com" target="_blank" class="button">Visit TempleOSRS</a>
+        <a href="https://discord.gg/sUT4Xx9zag" target="_blank" class="button">Join Discord</a>
+        <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit TempleOSRS</a>
+        <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" class="button rank-sheet">Rank Sheet</a>
     </div>
 </body>
 </html>
