@@ -10,13 +10,13 @@
             background-image: url('osrs_background.png'); /* Replace with your OSRS-themed background image */
             background-size: cover;
             background-repeat: no-repeat;
-            padding: 20px;
             margin: 0;
+            padding: 0;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         .container {
             max-width: 700px;
@@ -24,14 +24,18 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center; /* Center align content inside container */
+            margin-top: 20px; /* Added margin to separate sections */
         }
         h1 {
             color: #ffd700; /* Gold heading text */
-            text-align: center;
+            margin-top: 0; /* Ensure no top margin for h1 */
         }
         p {
             color: #ccc; /* Light grey paragraph text */
-            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px; /* Added margin to separate buttons */
         }
         .button {
             display: inline-block;
@@ -54,15 +58,44 @@
         .button.rank-sheet:hover {
             background-color: #2b7abc; /* Darker blue on hover */
         }
+        .about-section {
+            margin-top: 40px; /* Added space between sections */
+        }
+        .leadership {
+            margin-top: 40px; /* Added space between sections */
+        }
+        .leadership ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .leadership ul li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Irons Grotto</h1>
         <p>Check out our community links:</p>
-        <a href="https://discord.gg/sUT4Xx9zag" target="_blank" class="button">Join Discord</a>
-        <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit our clan TempleOSRS</a>
-        <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" class="button rank-sheet">Rank Sheet</a>
+        <div class="button-container">
+            <a href="https://discord.gg/sUT4Xx9zag" target="_blank" class="button">Join Discord</a>
+            <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit our clan TempleOSRS</a>
+            <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" class="button rank-sheet">Rank Sheet</a>
+        </div>
+
+        <div class="about-section container">
+            <h2>About Us</h2>
+            <p>We are a social Ironman clan dedicated to creating a vibrant community within the OSRS universe. Our clan organizes various events including bingo, boss of the week challenges, skill of the week competitions, and weekly group activities such as Tempoross and Wildy Prayer sessions.</p>
+        </div>
+
+        <div class="leadership container">
+            <h2>Leadership</h2>
+            <ul>
+                <li><strong>Owners:</strong> Aviios & Tyluh</li>
+                <li><strong>Deputies:</strong> Evizon, 41ex, Claytonaa, 1tick, Hoagie</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
