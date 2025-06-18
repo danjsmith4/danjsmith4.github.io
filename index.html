@@ -105,13 +105,7 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
 
-        .button.rank-sheet {
-            background-color: #8c4c26; /* Earthy brown/orange for a distinct look */
-        }
-
-        .button.rank-sheet:hover {
-            background-color: #7a4220; /* Darker brown on hover */
-        }
+        /* Removed .button.rank-sheet as it's no longer used */
 
         .button.apply-here {
             background-color: #4CAF50; /* A distinct green for "Apply" */
@@ -121,7 +115,7 @@
             background-color: #45a049; /* Darker green on hover */
         }
 
-        .about-section, .leadership, .apply-section { /* Added .apply-section here */
+        .about-section, .leadership, .apply-section { /* All sections now share this top margin and border */
             margin-top: 3.5rem; /* More space between sections */
             padding-top: 2rem; /* Padding inside sections */
             border-top: 1px dashed var(--border-color); /* Dashed line separator */
@@ -182,10 +176,17 @@
         <h1>Welcome to Irons Grotto</h1>
         <p>A thriving Old School RuneScape community for Ironman accounts.</p>
 
+        <div class="apply-section">
+            <h2>Apply for Rank</h2>
+            <p>Ready to take the next step in the Irons Grotto community? Apply for a higher rank by clicking the button below. You'll need to log in via Discord, and **you must be a member of our Discord server** to complete the application process.</p>
+            <div class="button-container">
+                <a href="YOUR_DISCORD_APPLICATION_LINK_HERE" target="_blank" class="button apply-here">Apply Here</a>
+            </div>
+        </div>
+
         <div class="button-container">
             <a href="https://discord.gg/sUT4Xx9zag" target="_blank" class="button">Join Discord</a>
             <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit TempleOSRS</a>
-            <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" target="_blank" class="button rank-sheet">View Rank Sheet</a>
         </div>
 
         <div class="about-section">
@@ -199,14 +200,6 @@
                 <li><strong>Owners:</strong> Aviios & Tyluh</li>
                 <li><strong>Deputies:</strong> Evizon, 41ex, Claytonaa, 1tick, Hoagie</li>
             </ul>
-        </div>
-
-        <div class="apply-section">
-            <h2>Apply for Rank</h2>
-            <p>Ready to take the next step in the Irons Grotto community? Apply for a higher rank by clicking the button below. You'll need to log in via Discord, and **you must be a member of our Discord server** to complete the application process.</p>
-            <div class="button-container">
-                <a href="YOUR_DISCORD_APPLICATION_LINK_HERE" target="_blank" class="button apply-here">Apply Here</a>
-            </div>
         </div>
     </div>
 </body>
