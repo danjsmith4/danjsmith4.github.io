@@ -3,93 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Irons Grotto</title>
+    <title>Irons Grotto - Old School RuneScape Clan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* CSS Variables for easier theme management */
+        :root {
+            --primary-gold: #FFD700; /* Gold */
+            --secondary-blue: #2e86c1; /* Original button blue */
+            --dark-background: rgba(0, 0, 0, 0.85); /* Slightly darker, less transparent */
+            --light-text: #E0E0E0; /* Off-white for body text */
+            --grey-text: #B0B0B0; /* Lighter grey for subtle text */
+            --border-color: #444; /* Dark grey for subtle borders */
+            --box-shadow-color: rgba(0, 0, 0, 0.5);
+            --transition-speed: 0.3s ease;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('osrs_background.png'); /* Replace with your OSRS-themed background image */
+            font-family: 'Open Sans', sans-serif; /* Modern sans-serif for body */
+            background-image: url('osrs_background.png'); /* Ensure this path is correct */
             background-size: cover;
-            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* Makes background static when scrolling */
             margin: 0;
             padding: 0;
-            color: white;
+            color: var(--light-text);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align items to the start, allow content to flow down */
             min-height: 100vh;
+            padding: 2rem 1rem; /* Padding for small screens */
+            box-sizing: border-box; /* Include padding in element's total width and height */
         }
+
         .container {
-            max-width: 700px;
-            background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            text-align: center; /* Center align content inside container */
-            margin-top: 20px; /* Added margin to separate sections */
+            max-width: 800px; /* Slightly wider container */
+            width: 100%;
+            background-color: var(--dark-background);
+            padding: 2.5rem; /* More padding for a less cramped feel */
+            border-radius: 10px; /* Slightly more rounded corners */
+            box-shadow: 0 10px 30px var(--box-shadow-color); /* More pronounced shadow */
+            text-align: center;
+            margin-top: 2rem; /* Initial margin from the top */
+            border: 1px solid var(--border-color); /* Subtle border */
+            overflow: hidden; /* Clear any floats/margins from children */
         }
+
+        h1, h2 {
+            font-family: 'Cinzel', serif; /* More elegant, thematic font for headings */
+            color: var(--primary-gold);
+            margin-top: 0;
+            margin-bottom: 1.5rem; /* Consistent spacing below headings */
+            text-transform: uppercase; /* A classic OSRS text feel */
+            letter-spacing: 0.05em; /* Slightly spaced out letters */
+        }
+
         h1 {
-            color: #ffd700; /* Gold heading text */
-            margin-top: 0; /* Ensure no top margin for h1 */
+            font-size: 2.8rem; /* Larger main heading */
         }
+
+        h2 {
+            font-size: 2.2rem; /* Slightly smaller section headings */
+            border-bottom: 2px solid var(--primary-gold); /* Underline for section headings */
+            padding-bottom: 0.5rem;
+            display: inline-block; /* Make border only as wide as text */
+        }
+
         p {
-            color: #ccc; /* Light grey paragraph text */
+            color: var(--grey-text);
+            line-height: 1.7; /* Better readability */
+            margin-bottom: 1.5rem; /* Consistent spacing below paragraphs */
         }
+
         .button-container {
-            margin-top: 20px; /* Added margin to separate buttons */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex; /* Use flexbox for button layout */
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+            justify-content: center; /* Center buttons horizontally */
+            gap: 1.5rem; /* Space between buttons */
         }
+
         .button {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
-            background-color: #2e86c1; /* Green button background */
+            padding: 0.8rem 2.2rem; /* Larger padding for better touch targets */
+            background-color: var(--secondary-blue);
             color: white;
             text-decoration: none;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px; /* Slightly more rounded */
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+            font-weight: 600; /* Bolder text for buttons */
+            font-size: 1.1rem;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
         }
+
         .button:hover {
-            background-color: #2b7abc; /* Darker green on hover */
+            background-color: #2671ae; /* Darker blue on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
+
         .button.rank-sheet {
-            background-color: #2b7abc; /* Blue button background */
+            background-color: #8c4c26; /* Earthy brown/orange for a distinct look */
         }
+
         .button.rank-sheet:hover {
-            background-color: #2b7abc; /* Darker blue on hover */
+            background-color: #7a4220; /* Darker brown on hover */
         }
-        .about-section {
-            margin-top: 40px; /* Added space between sections */
+
+        .about-section, .leadership {
+            margin-top: 3.5rem; /* More space between sections */
+            padding-top: 2rem; /* Padding inside sections */
+            border-top: 1px dashed var(--border-color); /* Dashed line separator */
         }
-        .leadership {
-            margin-top: 40px; /* Added space between sections */
-        }
+
         .leadership ul {
             list-style-type: none;
             padding: 0;
-            text-align: center;
+            margin-top: 1.5rem;
         }
+
         .leadership ul li {
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .leadership strong {
+            color: var(--primary-gold); /* Make titles stand out */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 1.5rem;
+                margin: 1rem; /* Reduce margin on smaller screens */
+            }
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically on small screens */
+                align-items: stretch; /* Make buttons full width */
+            }
+            .button {
+                width: 100%; /* Full width buttons */
+                margin: 0.5rem 0; /* Adjust vertical margin */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Irons Grotto</h1>
-        <p>Check out our community links:</p>
+        <p>A thriving Old School RuneScape community for Ironman accounts.</p>
+
         <div class="button-container">
             <a href="https://discord.gg/sUT4Xx9zag" target="_blank" class="button">Join Discord</a>
-            <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit our clan TempleOSRS</a>
-            <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" class="button rank-sheet">Rank Sheet</a>
+            <a href="https://templeosrs.com/groups/overview.php?id=241" target="_blank" class="button">Visit TempleOSRS</a>
+            <a href="https://docs.google.com/spreadsheets/d/15hY6VQJe9BXN7Fe_WHa-lP9P6JSuc9RV4ZLPbzU9DQw/edit?usp=sharing" target="_blank" class="button rank-sheet">View Rank Sheet</a>
         </div>
 
-        <div class="about-section container">
+        <div class="about-section">
             <h2>About Us</h2>
-            <p>We are a social Ironman clan dedicated to creating a vibrant community within the OSRS universe. Our clan organizes various events including bingo, boss of the week challenges, skill of the week competitions, and weekly group activities such as Tempoross and Wildy Prayer sessions.</p>
+            <p>We are a social Ironman clan dedicated to creating a vibrant community within the OSRS universe. Our clan organizes various events including bingo, boss of the week challenges, skill of the week competitions, and weekly group activities such as Tempoross and Wilderness Prayer sessions. Join us to find a supportive and active community!</p>
         </div>
 
-        <div class="leadership container">
+        <div class="leadership">
             <h2>Leadership</h2>
             <ul>
                 <li><strong>Owners:</strong> Aviios & Tyluh</li>
