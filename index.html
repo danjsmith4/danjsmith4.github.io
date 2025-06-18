@@ -113,7 +113,15 @@
             background-color: #7a4220; /* Darker brown on hover */
         }
 
-        .about-section, .leadership {
+        .button.apply-here {
+            background-color: #4CAF50; /* A distinct green for "Apply" */
+        }
+
+        .button.apply-here:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        .about-section, .leadership, .apply-section { /* Added .apply-section here */
             margin-top: 3.5rem; /* More space between sections */
             padding-top: 2rem; /* Padding inside sections */
             border-top: 1px dashed var(--border-color); /* Dashed line separator */
@@ -191,6 +199,14 @@
                 <li><strong>Owners:</strong> Aviios & Tyluh</li>
                 <li><strong>Deputies:</strong> Evizon, 41ex, Claytonaa, 1tick, Hoagie</li>
             </ul>
+        </div>
+
+        <div class="apply-section">
+            <h2>Apply for Rank</h2>
+            <p>Ready to take the next step in the Irons Grotto community? Apply for a higher rank by clicking the button below. You'll need to log in via Discord, and **you must be a member of our Discord server** to complete the application process.</p>
+            <div class="button-container">
+                <a href="YOUR_DISCORD_APPLICATION_LINK_HERE" target="_blank" class="button apply-here">Apply Here</a>
+            </div>
         </div>
     </div>
 </body>
